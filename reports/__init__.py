@@ -15,15 +15,13 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA, or visit
 # <http://www.gnu.org/copyleft/gpl.html>
 
-__all__ = [
-	'blankpages',
-	'inactiveusers',
-	'modtinvokes',
-	'mosttransclusions',
-	'nspagecount',
-	'simplewiki',
-	'templatedata',
-	'uncatmodules',
-	'userprefs',
-	'wantedpages'
-]
+from blankpages import *
+from inactiveusers import *
+from modtinvokes import *
+from mosttransclusions import *
+from nspagecount import *
+from simplewiki import *
+from templatedata import *
+from uncatmodules import *
+from userprefs import *
+from wantedpage import *
