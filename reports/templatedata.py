@@ -16,7 +16,6 @@
 # <http://www.gnu.org/copyleft/gpl.html>
 
 import DBRCore
-import sys
 
 class DBRtemplatedata:
 	def __init__( self, db='' ):
