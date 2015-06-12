@@ -10,4 +10,5 @@ install:
   - pip install MySQL-python
   - pip install wikitools
 script:
+  - cp settings.py.example settings.py
   - nosetests
