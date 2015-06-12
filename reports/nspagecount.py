@@ -21,6 +21,9 @@ class DBRnspagecount:
 	def __init__( self, db='' ):
 		self.dbquery = DBRCore.DBQuery( db )
 		self.Wiki = DBRCore.Wiki( db )
+		# For forward compatibility, in case certain extensions are enabled on one but not the other
+		if ( db == "simplewiki" or db == "simplewiktionary" ):
+			self.namespaces = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 828, 829 ]
 
 	def execute( self ):
 		title = "Page count by namespace"
