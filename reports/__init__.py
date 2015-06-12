@@ -24,4 +24,4 @@ from simplewiki import *
 from templatedata import *
 from uncatmodules import *
 from userprefs import *
-from wantedpage import *
+from wantedpages import *
