@@ -29,7 +29,7 @@ def ignore( dir ):
 
 class TestDBR( unittest.TestCase ):
 	def test_pep8( self ):
-		style = pep8.StyleGuide( quiet=True )
+		style = pep8.StyleGuide()
 		errors = 0
 		for root, _, files in os.walk( '.' ):
 			if ignore( root ):
