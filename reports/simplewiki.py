@@ -20,7 +20,7 @@ import DBRCore
 class DBRsimplewiki:
 	def __init__( self, db='' ):
 		self.dbquery = DBRCore.DBQuery( db )
-		self.remotequery = DBRCore.DBQuery( 'simplewiki_p' )
+		self.remotequery = DBRCore.DBQuery( 'simplewiki' )
 		self.Wiki = DBRCore.Wiki( db )
 
 	def getPageTitle( self, pageid ):
