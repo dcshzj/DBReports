@@ -17,7 +17,7 @@
 
 from blankpages import *
 from inactiveusers import *
-from modtinvokes import *
+from mostinvokes import *
 from mosttransclusions import *
 from nspagecount import *
 from simplewiki import *
