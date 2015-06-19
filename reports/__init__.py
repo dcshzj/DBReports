@@ -15,6 +15,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA, or visit
 # <http://www.gnu.org/copyleft/gpl.html>
 
+from blankiptalk import *
 from blankpages import *
 from inactiveusers import *
 from mostinvokes import *
