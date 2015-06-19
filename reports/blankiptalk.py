@@ -25,7 +25,7 @@ class DBRblankiptalk:
 
 	def execute( self ):
 		title = "Blank user talk pages for IPs"
-		query = "SELECT ns_name, page_title FROM page JOIN s51892_toolserverdb_p.namespace ON ns_id = page_namespace WHERE dbname = %s AND page_namespace = 3 AND page_title RLIKE %s AND page_len = 0 LIMIT 1000;", ( self.database, r'^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$') )
+		query = "SELECT ns_name, page_title FROM page JOIN s51892_toolserverdb_p.namespace ON ns_id = page_namespace WHERE dbname = %s AND page_namespace = 3 AND page_title RLIKE %s AND page_len = 0 LIMIT 1000;", ( self.database, r'^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$' )
  		template = '''Blank user talk pages of anonymous users (limited to the first 1000 entries); data as of <onlyinclude>%s</onlyinclude>.
 
 {| class="wikitable sortable plainlinks" style="width:100%%; margin:auto;"
