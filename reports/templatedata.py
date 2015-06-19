@@ -24,7 +24,7 @@ class DBRtemplatedata:
 
 	def execute( self ):
 		title = "Templates without TemplateData"
-		template = '''Templates without [[{{subst:SITENAME}}:TemplateData|TemplateData]] documentation in them (limited to 500 results); data as of <onlyinclude>%s</onlyinclude>.
+		template = '''Templates without [[{{subst:SITENAME}}:TemplateData|TemplateData]] documentation in them; data as of <onlyinclude>%s</onlyinclude>.
 
 {| class="wikitable sortable plainlinks" style="width:100%%; margin:auto;"
 |- style="white-space:nowrap;"
@@ -36,7 +36,7 @@ class DBRtemplatedata:
 
 [[Category:{{subst:SITENAME}} database reports|{{SUBPAGENAME}}]]
 '''
-		query = "SELECT page_title FROM page LEFT JOIN page_props ON page_id=pp_page WHERE pp_propname='templatedata' AND page_namespace='10' LIMIT 500;"
+		query = "SELECT page_title FROM page LEFT JOIN page_props ON page_id=pp_page WHERE pp_propname='templatedata' AND page_namespace='10';"
 		withtemplatedata = self.dbquery.execute( query )
 		templates = "SELECT page_title FROM page WHERE page_namespace='10' AND page_is_redirect='0' ORDER BY page_title;"
 		results = self.dbquery.execute( templates )
