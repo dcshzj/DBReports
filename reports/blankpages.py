@@ -47,6 +47,9 @@ class DBRblankpages:
 				pagetitle = ':{{subst:ns:%s}}:%s' % ( nsid, pagetitle )
 			elif ( nsid == 0 ):
 				pagetitle = '%s' % (pagetitle)
+			elif ( nsid == 2 or nsid == 3 ):
+				# Skip User: and User_talk: namespaces
+				continue
 			else:
 				pagetitle = '{{subst:ns:%s}}:%s' % ( nsid, pagetitle )
 			tablerow = '| %d\n| [[%s]]\n|-' % ( i, pagetitle )
