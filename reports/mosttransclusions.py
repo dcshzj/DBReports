@@ -42,9 +42,9 @@ class DBRmosttransclusions:
 		i = 1
 		output = []
 		for row in rows:
-			pagetitle = 'Template:%s' % ( row[0] )
+			pagetitle = 'Template:%s' % ( row[0].decode( 'utf8' ) )
 			uses = row[1]
-			tablerow = '| %d\n| [[%s|%s]]\n| %s\n|-' % ( i, pagetitle, row[0], uses )
+			tablerow = '| %d\n| [[%s|%s]]\n| %s\n|-' % ( i, pagetitle, row[0].decode( 'utf8' ), uses )
 			output.append( tablerow )
 			i += 1
 		contents = template % ( self.Wiki.getDataAsOf(), '\n'.join( output ) )
