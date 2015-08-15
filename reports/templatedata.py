@@ -46,7 +46,7 @@ class DBRtemplatedata:
 			if ( result in withtemplatedata ):
 				continue
 			else:
-				tablerow = "| %d\n| [[Template:%s]]\n|-" % ( i, result[0] )
+				tablerow = "| %d\n| [[Template:%s]]\n|-" % ( i, result[0].decode( 'utf8' ) )
 				output.append( tablerow )
 				i += 1
 		contents = template % ( self.Wiki.getDataAsOf(), '\n'.join( output ) )
