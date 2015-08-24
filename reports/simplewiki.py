@@ -28,11 +28,11 @@ class DBRsimplewiki:
 		results = self.remotequery.execute( query )
 		for result in results:
 			if ( result[0] == 6 or result[0] == 14 ):
-				output = ':{{subst:ns:%s}}:%s' % ( result[0], result[1] )
+				output = ':{{subst:ns:%s}}:%s' % ( result[0], result[1].decode( 'utf8' ) )
 			elif ( result[0] == 0 ):
-				output = '%s' % ( result[1] )
+				output = '%s' % ( result[1].decode( 'utf8' ) )
 			else:
-				output = '{{subst:ns:%s}}:%s' % ( result[0], result[1] )
+				output = '{{subst:ns:%s}}:%s' % ( result[0], result[1].decode( 'utf8' ) )
 		return output
 
 	def lowerCase( self, text ):
