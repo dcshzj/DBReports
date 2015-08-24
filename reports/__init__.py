@@ -26,3 +26,4 @@ from templatedata import *
 from uncatmodules import *
 from userprefs import *
 from wantedpages import *
+from wordlist import *
