@@ -89,7 +89,7 @@ Data as of <onlyinclude>%s</onlyinclude>.
 			paroutput.append( parrow )
 
 		contents = template % ( self.Wiki.getDataAsOf(), ''.join( movehereoutput )[:-3], ''.join( wiktoutput )[:-3], ''.join( paroutput )[:-3] )
-		self.Wiki.outputToWiki( title, contents )
+		self.Wiki.outputToWiki( title, contents.encode( 'utf8' ) )
 
 if __name__ == "__main__":
 	print "This module should not be called directly! Please use dbr.py to run the database reports."
