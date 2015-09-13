@@ -48,7 +48,7 @@ class DBRmosttransclusions:
 			output.append( tablerow )
 			i += 1
 		contents = template % ( self.Wiki.getDataAsOf(), '\n'.join( output ) )
-		self.Wiki.outputToWiki( title, contents )
+		self.Wiki.outputToWiki( title, contents.encode( 'utf8' ) )
 
 if __name__ == "__main__":
 	print "This module should not be called directly! Please use dbr.py to run the database reports."
